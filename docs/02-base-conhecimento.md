@@ -21,15 +21,11 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 ## Adaptações nos Dados
 
 Os dados mockados disponibilizados na pasta `data/` foram utilizados como base principal do agente, sem necessidade de alterações estruturais significativas, pois já atendem bem ao objetivo do projeto.
-
-Foram realizadas apenas adaptações conceituais, definindo regras claras de uso dos dados pelo agente:
-
-- O `historico_atendimento.csv` é utilizado exclusivamente para contextualizar interações anteriores, evitando respostas repetidas e garantindo continuidade no atendimento.
-- O `perfil_investidor.json` é usado como fonte única de informações sobre perfil, objetivos e tolerância a risco, sem que o agente altere ou infira dados não presentes no arquivo.
-- O arquivo `produtos_financeiros.json` contém produtos financeiros fictícios, utilizados apenas para fins educacionais e de simulação, sem representar ofertas reais.
-- O `transacoes.csv` é utilizado para análise de padrão de gastos e comportamento financeiro, permitindo diagnósticos básicos e orientações educativas, sem recomendações de investimento automáticas.
-
-Essas adaptações garantem maior controle, transparência e redução de alucinações, alinhando o agente às boas práticas de segurança em aplicações de IA.
+Os dados foram utilizados sem alterações estruturais, apenas com regras claras de uso:
+- [ ] Produtos são fictícios e usados apenas para fins educacionais;
+- [ ] Transações são usadas para diagnóstico básico, não decisões automáticas;
+- [ ] O agente não altera nem infere dados inexistentes.
+- [ ] Isso reduz risco de alucinação e mantém rastreabilidade.
 
 
 ---
@@ -39,21 +35,14 @@ Essas adaptações garantem maior controle, transparência e redução de alucin
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 
-Os arquivos CSV e JSON da pasta `data` são carregados no início da sessão do agente.  
-Esses dados são processados e inseridos de forma estruturada no contexto do prompt, servindo como **fonte única de conhecimento** para as respostas.
-
-O agente consulta essas informações a cada interação, sem persistência de memória fora da sessão, garantindo que todas as respostas sejam baseadas exclusivamente nos dados fornecidos e evitando alucinações
+Os arquivos CSV e JSON são carregados no início da aplicação via Python e utilizados como fonte única de conhecimento durante a sessão.
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
-Os dados **não são inseridos integralmente no system prompt**.  
-Eles são consultados de forma dinâmica conforme a intenção da pergunta do usuário.
-
-O system prompt define o comportamento do agente (GUI), suas regras de segurança e limitações.  
-Já os dados relevantes (perfil do cliente, transações, produtos ou histórico) são selecionados e injetados no prompt **apenas quando necessários**, como contexto adicional para a resposta.
-
-Essa abordagem reduz o risco de alucinações, melhora a performance do modelo e garante que o agente responda somente com base nas informações disponíveis.
+- [ ] O system prompt define regras e comportamento;
+- [ ] Os dados são consultados dinamicamente conforme a pergunta;
+- [ ] Apenas informações relevantes entram no contexto da resposta.
 
 ---
 
