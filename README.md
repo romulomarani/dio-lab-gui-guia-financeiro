@@ -1,149 +1,303 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# 🤖💰 Guia Financeiro Inteligente - Agente IA Generativa
 
-## Contexto
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![DIO](https://img.shields.io/badge/DIO-Lab-orange.svg)](https://dio.me)
 
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
+> Um assistente financeiro inteligente que utiliza IA Generativa para oferecer consultoria personalizada, antecipar necessidades e cocriar soluções financeiras de forma proativa e segura.
 
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
+## 📋 Índice
 
-> [!TIP]
-> Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
+- [Visão Geral](#-visão-geral)
+- [Características](#-características)
+- [Arquitetura](#-arquitetura)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Instalação](#-instalação)
+- [Uso](#-uso)
+- [Base de Conhecimento](#-base-de-conhecimento)
+- [Documentação](#-documentação)
+- [Tecnologias](#-tecnologias)
+- [Roadmap](#-roadmap)
+- [Contribuindo](#-contribuindo)
+- [Licença](#-licença)
 
----
+## 🎯 Visão Geral
 
-## O Que Você Deve Entregar
+Este projeto é um laboratório de desenvolvimento de um **agente financeiro inteligente** que vai além de simples chatbots. Utilizando IA Generativa, o agente é capaz de:
 
-### 1. Documentação do Agente
+- 🔮 **Antecipar necessidades** do cliente antes mesmo dele perguntar
+- 🎯 **Personalizar recomendações** com base no perfil e histórico
+- 💡 **Cocriar soluções** financeiras de forma consultiva
+- 🛡️ **Garantir segurança** e confiabilidade nas respostas
 
-Defina **o que** seu agente faz e **como** ele funciona:
+### 🚀 Diferenciais
 
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
+- **Proatividade**: Não apenas responde, mas sugere ações baseadas em análise de dados
+- **Contextualização**: Entende o momento financeiro do usuário
+- **Segurança**: Implementa técnicas anti-alucinação para respostas confiáveis
+- **Personalização**: Adapta tom de voz e recomendações ao perfil do cliente
 
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
+## ✨ Características
 
----
+### 🤝 Consultoria Personalizada
+- Análise de perfil do investidor
+- Sugestões de produtos financeiros adequados
+- Alertas proativos sobre oportunidades
 
-### 2. Base de Conhecimento
+### 📊 Análise Inteligente
+- Processamento de histórico de transações
+- Identificação de padrões de gastos
+- Previsões e tendências financeiras
 
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
+### 🔒 Segurança e Confiabilidade
+- Sistema anti-alucinação
+- Validação de respostas contra base de conhecimento
+- Transparência nas recomendações
 
-| Arquivo | Formato | Descrição |
-|---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
+### 🎨 Experiência do Usuário
+- Interface conversacional natural
+- Tom de voz adaptável
+- Respostas contextualizadas
 
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
+## 🏗️ Arquitetura
 
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
-
----
-
-### 3. Prompts do Agente
-
-Documente os prompts que definem o comportamento do seu agente:
-
-- **System Prompt:** Instruções gerais de comportamento e restrições
-- **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
-- **Tratamento de Edge Cases:** Como o agente lida com situações limite
-
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
-
----
-
-### 4. Aplicação Funcional
-
-Desenvolva um **protótipo funcional** do seu agente:
-
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
-
-📁 **Pasta:** [`src/`](./src/)
-
----
-
-### 5. Avaliação e Métricas
-
-Descreva como você avalia a qualidade do seu agente:
-
-**Métricas Sugeridas:**
-- Precisão/assertividade das respostas
-- Taxa de respostas seguras (sem alucinações)
-- Coerência com o perfil do cliente
-
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
-
----
-
-### 6. Pitch
-
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
-
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
-
-📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
-
----
-
-## Ferramentas Sugeridas
-
-Todas as ferramentas abaixo possuem versões gratuitas:
-
-| Categoria | Ferramentas |
-|-----------|-------------|
-| **LLMs** | [ChatGPT](https://chat.openai.com/), [Copilot](https://copilot.microsoft.com/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/), [Ollama](https://ollama.ai/) |
-| **Desenvolvimento** | [Streamlit](https://streamlit.io/), [Gradio](https://www.gradio.app/), [Google Colab](https://colab.research.google.com/) |
-| **Orquestração** | [LangChain](https://www.langchain.com/), [LangFlow](https://www.langflow.org/), [CrewAI](https://www.crewai.com/) |
-| **Diagramas** | [Mermaid](https://mermaid.js.org/), [Draw.io](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) |
-
----
-
-## Estrutura do Repositório
-
-```
-📁 lab-agente-financeiro/
-│
-├── 📄 README.md
-│
-├── 📁 data/                          # Dados mockados para o agente
-│   ├── historico_atendimento.csv     # Histórico de atendimentos (CSV)
-│   ├── perfil_investidor.json        # Perfil do cliente (JSON)
-│   ├── produtos_financeiros.json     # Produtos disponíveis (JSON)
-│   └── transacoes.csv                # Histórico de transações (CSV)
-│
-├── 📁 docs/                          # Documentação do projeto
-│   ├── 01-documentacao-agente.md     # Caso de uso e arquitetura
-│   ├── 02-base-conhecimento.md       # Estratégia de dados
-│   ├── 03-prompts.md                 # Engenharia de prompts
-│   ├── 04-metricas.md                # Avaliação e métricas
-│   └── 05-pitch.md                   # Roteiro do pitch
-│
-├── 📁 src/                           # Código da aplicação
-│   └── app.py                        # (exemplo de estrutura)
-│
-├── 📁 assets/                        # Imagens e diagramas
-│   └── ...
-│
-└── 📁 examples/                      # Referências e exemplos
-    └── README.md
+```mermaid
+graph TD
+    A[Usuário] --> B[Interface do Chat]
+    B --> C[Orquestrador LLM]
+    C --> D[Base de Conhecimento]
+    C --> E[Sistema de Prompts]
+    D --> F[Transações]
+    D --> G[Perfil do Cliente]
+    D --> H[Produtos Financeiros]
+    D --> I[Histórico de Atendimento]
+    E --> J[System Prompt]
+    E --> K[Prompts Contextuais]
+    C --> L[Validador Anti-Alucinação]
+    L --> B
 ```
 
+## 📁 Estrutura do Projeto
+
+```
+📦 dio-lab-gui-guia-financeiro/
+│
+├── 📄 README.md                         # Este arquivo
+│
+├── 📂 data/                             # 🗄️ Base de conhecimento (dados mockados)
+│   ├── transacoes.csv                   # Histórico de transações
+│   ├── historico_atendimento.csv        # Atendimentos anteriores
+│   ├── perfil_investidor.json           # Perfil e preferências
+│   └── produtos_financeiros.json        # Catálogo de produtos
+│
+├── 📂 docs/                             # 📚 Documentação técnica
+│   ├── 01-documentacao-agente.md        # Caso de uso e arquitetura
+│   ├── 02-base-conhecimento.md          # Estratégia de dados
+│   ├── 03-prompts.md                    # Engenharia de prompts
+│   ├── 04-metricas.md                   # Sistema de avaliação
+│   └── 05-pitch.md                      # Apresentação do projeto
+│
+├── 📂 src/                              # 💻 Código fonte
+│   ├── app.py                           # Aplicação principal
+│   ├── prompts/                         # Templates de prompts
+│   ├── utils/                           # Utilitários
+│   └── models/                          # Modelos e integrações
+│
+├── 📂 examples/                         # 📖 Exemplos de implementação
+│   └── README.md                        # Guia de referência
+│
+├── 📂 assets/                           # 🎨 Recursos visuais
+│   └── diagramas/                       # Diagramas de arquitetura
+│
+├── 📂 tests/                            # 🧪 Testes automatizados
+│   └── test_agente.py
+│
+├── 📄 requirements.txt                  # Dependências do projeto
+├── 📄 .gitignore                        # Arquivos ignorados
+└── 📄 LICENSE                           # Licença MIT
+```
+
+## 🚀 Instalação
+
+### Pré-requisitos
+
+- Python 3.8 ou superior
+- pip (gerenciador de pacotes Python)
+- Git
+
+### Passo a Passo
+
+1. **Clone o repositório**
+```bash
+git clone https://github.com/romulomarani/dio-lab-gui-guia-financeiro.git
+cd dio-lab-gui-guia-financeiro
+```
+
+2. **Crie um ambiente virtual** (recomendado)
+```bash
+python -m venv venv
+
+# Windows
+venv\Scripts\activate
+
+# Linux/Mac
+source venv/bin/activate
+```
+
+3. **Instale as dependências**
+```bash
+pip install -r requirements.txt
+```
+
+4. **Configure as variáveis de ambiente**
+```bash
+# Copie o arquivo de exemplo
+cp .env.example .env
+
+# Edite o arquivo .env com suas credenciais
+# OPENAI_API_KEY=sua-chave-aqui
+# ou use outras LLMs disponíveis
+```
+
+5. **Execute a aplicação**
+```bash
+streamlit run src/app.py
+```
+
+## 💡 Uso
+
+### Iniciando uma Conversa
+
+```python
+# Exemplo de uso programático
+from src.agente import AgenteFinanceiro
+
+agente = AgenteFinanceiro()
+resposta = agente.consultar("Quais são as melhores opções de investimento para o meu perfil?")
+print(resposta)
+```
+
+### Interface Web
+
+Acesse `http://localhost:8501` após executar a aplicação com Streamlit.
+
+### Exemplos de Perguntas
+
+- "Como está minha situação financeira atualmente?"
+- "Quais investimentos você recomenda para o meu perfil?"
+- "Há algum gasto incomum no meu histórico?"
+- "Como posso economizar R$ 500 por mês?"
+
+## 🗄️ Base de Conhecimento
+
+O agente utiliza dados mockados que simulam informações reais de um cliente:
+
+| Arquivo | Formato | Conteúdo |
+|---------|---------|----------|
+| `transacoes.csv` | CSV | Histórico de receitas e despesas |
+| `historico_atendimento.csv` | CSV | Conversas anteriores do cliente |
+| `perfil_investidor.json` | JSON | Perfil de risco e preferências |
+| `produtos_financeiros.json` | JSON | Catálogo de produtos disponíveis |
+
+Esses dados podem ser adaptados ou expandidos conforme a necessidade do seu caso de uso.
+
+## 📚 Documentação
+
+A documentação completa está disponível na pasta [`docs/`](docs/):
+
+1. **[Documentação do Agente](docs/01-documentacao-agente.md)** - Caso de uso, persona e arquitetura
+2. **[Base de Conhecimento](docs/02-base-conhecimento.md)** - Estratégia de dados e integração
+3. **[Engenharia de Prompts](docs/03-prompts.md)** - System prompts e exemplos
+4. **[Métricas e Avaliação](docs/04-metricas.md)** - Como avaliamos a qualidade
+5. **[Pitch do Projeto](docs/05-pitch.md)** - Apresentação executiva
+
+## 🛠️ Tecnologias
+
+### Core
+
+- **Python 3.8+** - Linguagem principal
+- **Streamlit** - Interface web interativa
+- **LangChain** - Orquestração de LLMs
+- **Pandas** - Manipulação de dados
+
+### LLMs Suportados
+
+- OpenAI GPT (ChatGPT)
+- Google Gemini
+- Anthropic Claude
+- Microsoft Copilot
+- Ollama (modelos locais)
+
+### Ferramentas de Desenvolvimento
+
+- **Mermaid** - Diagramas de arquitetura
+- **Pytest** - Testes automatizados
+- **Black** - Formatação de código
+- **Pylint** - Análise estática
+
+## 🗺️ Roadmap
+
+### Versão 1.0 (Atual)
+- [x] Estrutura base do projeto
+- [x] Dados mockados
+- [x] Templates de documentação
+- [ ] Protótipo funcional básico
+
+### Versão 1.1 (Próxima)
+- [ ] Interface Streamlit completa
+- [ ] Integração com múltiplas LLMs
+- [ ] Sistema de métricas automatizado
+- [ ] Testes unitários
+
+### Versão 2.0 (Futuro)
+- [ ] Análise preditiva avançada
+- [ ] Integração com APIs bancárias reais
+- [ ] Dashboard de visualização
+- [ ] Sistema de notificações proativas
+- [ ] Suporte multilíngue
+
+## 🤝 Contribuindo
+
+Contribuições são bem-vindas! Para contribuir:
+
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/MinhaFeature`)
+3. Commit suas mudanças (`git commit -m 'Adiciona MinhaFeature'`)
+4. Push para a branch (`git push origin feature/MinhaFeature`)
+5. Abra um Pull Request
+
+### Diretrizes
+
+- Siga o padrão de código existente
+- Adicione testes para novas funcionalidades
+- Atualize a documentação conforme necessário
+- Mantenha commits claros e descritivos
+
+## 📜 Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+## 👨‍💻 Autor
+
+**Rômulo Marani**
+
+- GitHub: [@romulomarani](https://github.com/romulomarani)
+- LinkedIn: [Seu LinkedIn](https://linkedin.com/in/seu-perfil)
+
+## 🙏 Agradecimentos
+
+- [Digital Innovation One (DIO)](https://dio.me) - Pelo desafio e plataforma de aprendizado
+- Comunidade open source - Pelas ferramentas incríveis
+- Você - Por conferir este projeto!
+
 ---
 
-## Dicas Finais
+<div align="center">
 
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
-5. **Seja direto no pitch:** 3 minutos passam rápido, vá ao ponto
+**[⬆ Voltar ao topo](#-guia-financeiro-inteligente---agente-ia-generativa)**
+
+Feito com ❤️ e ☕ por [Rômulo Marani](https://github.com/romulomarani)
+
+Se este projeto foi útil, considere dar uma ⭐!
+
+</div>
