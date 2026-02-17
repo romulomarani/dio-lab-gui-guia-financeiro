@@ -282,7 +282,7 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 **Rômulo Marani**
 
 - GitHub: [@romulomarani](https://github.com/romulomarani)
-- LinkedIn: [Seu LinkedIn](https://linkedin.com/in/seu-perfil)
+- LinkedIn:(https://www.linkedin.com/in/rômulo-marani-martins-0ab28222a?utm_source=share_via&utm_content=profile&utm_medium=member_android) 
 
 ## 🙏 Agradecimentos
 
